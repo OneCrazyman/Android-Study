@@ -2,10 +2,15 @@ package com.example.timerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.media.MediaParser;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -20,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private NumberPicker npkerMin, npkerSec;
     private RatingBar ratingBar;
     private boolean TimerRunning;
+    LinearLayout mainPage;
+    MediaPlayer mediaPlayer;
     //    private TimePicker timerTimePicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         npkerMin = (NumberPicker) findViewById(R.id.npkerMin);
         npkerSec = (NumberPicker) findViewById(R.id.npkerSec);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        mainPage = (LinearLayout) findViewById(R.id.page);
 
         npkerMin.setMaxValue(99); //최대
         npkerMin.setMinValue(0); //최소
@@ -55,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         npkerSec.setWrapSelectorWheel(true); //최대최소 임계에서 멈출지 넘어갈지
 
         TimerRunning = false;
+        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.ringtone);
+
     }
     //이벤트리스너
     private void EventListner(){
@@ -97,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
     //method
     private void startTimer() {
+
         if (!TimerRunning){ //초기 타이머 설정 reset누른상태에서만 다시 실행됨
             timeLeftInMilliseconds = getNumberNpker();
             TimerRunning = true;
@@ -111,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 // Do something when the timer finishes
+                mediaPlayer.start(); //알람실행
+                Toast.makeText(getApplicationContext(), "타이머가 종료되었습니다.", Toast.LENGTH_SHORT).show();
+                mainPage.setBackgroundColor(Color.parseColor("#FF0000"));
+                pauseButton.setEnabled(false);
+                resetButton.setEnabled(true);
             }
         }.start();
 
@@ -127,9 +143,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void resetTimer() {
+        mainPage.setBackgroundColor(Color.parseColor("#FFFFFF"));
         timeLeftInMilliseconds = getNumberNpker();
         updateTimer();
         TimerRunning = false;
+//        mediaPlayer.stop();
+//        mediaPlayer.reset();
         startButton.setEnabled(true);
         pauseButton.setEnabled(false);
         resetButton.setEnabled(false);
