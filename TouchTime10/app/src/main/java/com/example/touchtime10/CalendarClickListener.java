@@ -10,6 +10,7 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -26,8 +27,10 @@ public class CalendarClickListener implements OnDateSelectedListener {
     public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
         Log.v("print", String.valueOf(date.getDate()));
         Intent intent = new Intent(context, DateDetailsActivity.class);
-        intent.putExtra("selectedDate", String.valueOf(date.getDate()));
+
+        //인탠트에 선택된 날짜 삽입
+        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
+        intent.putExtra("selectedDate", String.valueOf(sdf.format(date.getDate())));
         context.startActivity(intent);
-//        dates.add(date);
     }
 }

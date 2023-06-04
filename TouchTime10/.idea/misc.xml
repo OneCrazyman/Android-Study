@@ -3,10 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.367" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/drawable/ic_launcher_addButton_background.xml" value="0.367" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/drawable/ic_launcher_addButton_foreground.xml" value="0.367" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/drawable/ic_launcher_add_background_round.xml" value="0.248" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/drawable/ic_launcher_add_foreground.xml" value="0.248" />
         <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1445" />
         <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/layout/activity_date_details.xml" value="0.22" />
         <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/layout/activity_main.xml" value="0.3302325581395349" />
         <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/layout/itemlist_date_details.xml" value="0.25" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.367" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/mipmap-anydpi-v26/ic_launcher_addButton.xml" value="0.367" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/mipmap-anydpi-v26/ic_launcher_addButton_round.xml" value="0.367" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/mipmap-anydpi-v26/ic_launcher_add_round.xml" value="0.248" />
+        <entry key="..\:/Users/WONJAE/AndroidStudioProjects/TouchTime10/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.367" />
       </map>
     </option>
   </component>
