@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_account_withdrawal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계좌 출납입" />
+        <RadioButton
+            android:id="@+id/radio_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일정 등록" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linear_cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinner_cash_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edit_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="금액"
+            android:inputType="numberDecimal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="일정 제목을 써주세요"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+</LinearLayout>
