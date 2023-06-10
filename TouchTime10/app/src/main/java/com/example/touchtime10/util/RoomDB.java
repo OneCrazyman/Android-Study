@@ -6,10 +6,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.touchtime10.dao.CashDao;
 import com.example.touchtime10.dao.EventDao;
+import com.example.touchtime10.entity.Cash;
 import com.example.touchtime10.entity.Event;
 
-@Database(entities = {Event.class},version = 1, exportSchema = false)
+@Database(entities = {Event.class, Cash.class},version = 4, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     private static RoomDB database;
 
@@ -27,5 +29,6 @@ public abstract class RoomDB extends RoomDatabase {
         return database;
     }
 
+    public abstract CashDao cashDao();
     public abstract EventDao eventDao();
 }

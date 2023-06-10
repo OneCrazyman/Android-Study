@@ -5,6 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.RoomDatabase;
 
 import com.example.touchtime10.entity.Event;
 
@@ -30,6 +31,10 @@ public interface EventDao {
     @Query("delete from events")
     void deleteAll();
 
+    @Query("delete from events where id= :id")
+    void delete(int id);
+
     @Delete
     void reset(List<Event> events);
+
 }

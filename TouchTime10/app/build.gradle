@@ -41,5 +41,6 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
     implementation "androidx.lifecycle:lifecycle-livedata:2.2.0"
+    implementation "androidx.core:core:1.6.0"
 }
 

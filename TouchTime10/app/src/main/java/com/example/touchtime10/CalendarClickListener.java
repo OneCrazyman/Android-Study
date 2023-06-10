@@ -30,7 +30,9 @@ public class CalendarClickListener implements OnDateSelectedListener {
 
         //인탠트에 선택된 날짜 삽입
         SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd");
-        intent.putExtra("selectedDate", String.valueOf(sdf.format(date.getDate())));
+        intent.putExtra("selectedDate", String.valueOf
+
+                (sdf.format(date.getDate())));
         context.startActivity(intent);
     }
 }
