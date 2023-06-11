@@ -78,7 +78,6 @@ public class DateDetailsActivity extends AppCompatActivity implements View.OnCli
         //오늘 날짜 데이터 갖고옴
         Intent dateDetailIntent = getIntent();
         date = dateDetailIntent.getStringExtra("selectedDate");
-        Log.v("print", "test");
         //db에서 오늘날짜 event 데이터를 가져와 arraylist에 반환
         events = getEventList(date);
         cashes = getCashList(date);
@@ -86,7 +85,6 @@ public class DateDetailsActivity extends AppCompatActivity implements View.OnCli
         TextView tv = findViewById(R.id.textView);
         tv.setText(date);
         //
-        Log.v("print", "test");
         list = (ListView)findViewById(R.id.list);
         list_cash = (ListView)findViewById(R.id.list_cash);
         addButton = findViewById(R.id.addButton);
@@ -191,6 +189,8 @@ public class DateDetailsActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
+
+    //계좌출납입 커스텀리스트
     public class CustomList_cash extends ArrayAdapter<Cash> {
         private Activity context;
         private List<Cash> cashes;
